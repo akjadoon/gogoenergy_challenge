@@ -1,0 +1,27 @@
+.paginationBtnGroup div {
+    display: flex;
+    position: relative;
+    left: 0;
+}
+
+.paginationBtnGroup button {
+    height: 36px;
+
+    color: white;
+    background-color: #0088bf;
+    font-size: 18px;
+    padding: 7px 15px;
+}
+
+.paginationBtnGroup button.selected{
+    color: #0088bf;
+    background-color: white;
+}
+
+.paginationBtnGroup button:disabled {
+    background-color: grey;
+}
+
+.paginationBtnGroup .next {
+    border-radius: 0px 18px 18px 0px;
+}
