@@ -13,7 +13,9 @@ function UserTableContainer(props){
     const [page, setPage] = useState(1);
 
     async function handleDeleteUser(e){
-        const id = e.target.value;
+        e.preventDefault();
+
+        const id = e.currentTarget.value;
         const result = await UserAPI.delete_user(id);
 
         const nextUsers = users.filter(u => u.id !== id);
@@ -26,7 +28,7 @@ function UserTableContainer(props){
     }
 
     async function handlePageChange(e){
-        setPage(parseInt(e.target.value));
+        setPage(parseInt(e.currentTarget.value));
     }
 
     useEffect(() => {
